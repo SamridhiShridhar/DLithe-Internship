@@ -3,7 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple News Page</title>
+    <title>Awesome News Page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: white;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffdd57;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        article {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        article:hover {
+            transform: translateY(-10px);
+        }
+        h2 {
+            color: #ffdd57;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -11,9 +72,11 @@
     </header>
 
     <nav>
-        <a href="#">Home</a><br>
-        <a href="#">World</a><br>
-        <a href="#">Sports</a><br>
+        <a href="#">Home</a>
+        <a href="#">World</a>
+        <a href="#">Sports</a>
+        <a href="#">Technology</a>
+        <a href="#">Entertainment</a>
     </nav>
 
     <section>
@@ -27,9 +90,15 @@
             <p>Last-minute goal secures the win.</p>
         </article>
 
-        
+        <article>
+            <h2>Technology Update</h2>
+            <p>New AI model achieves record-breaking accuracy in speech recognition.</p>
+        </article>
+
+        <article>
+            <h2>Entertainment Buzz</h2>
+            <p>Upcoming blockbuster movie trailer released, fans are excited!</p>
+        </article>
     </section>
-
-
 </body>
 </html>
