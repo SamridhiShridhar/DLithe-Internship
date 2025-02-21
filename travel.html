@@ -4,6 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Destinations</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #2c3e50, #34495e, #16a085);
+            color: #fff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            font-size: 3.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+        }
+        nav a {
+            color: white;
+            margin: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 15px 25px;
+            border-radius: 20px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        section {
+            padding: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1600px;
+            margin: auto;
+        }
+        article {
+            background: white;
+            color: #333;
+            padding: 60px;
+            margin: 20px;
+            border-radius: 30px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            width: 550px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        article:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #16a085;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -11,10 +82,10 @@
     </header>
     
     <nav>
-        <a href="#">Home</a> |
-        <a href="#">Destinations</a> |
-        <a href="#">Packages</a> |
-        <a href="#">About</a> |
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Packages</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
     </nav>
     
@@ -33,7 +104,11 @@
             <h2>Why Choose Us?</h2>
             <p>Get the best prices and support for a hassle-free travel experience.</p>
         </article>
+        
+        <article>
+            <h2>Top Destinations</h2>
+            <p>Discover breathtaking locations handpicked for your perfect getaway.</p>
+        </article>
     </section>
-    
 </body>
 </html>
