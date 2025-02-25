@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World - Travel Agency</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background: linear-gradient(to right, #8e44ad, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .container {
+            width: 85%;
+            max-width: 1300px;
+            margin: auto;
+            padding: 40px;
+        }
+        .section {
+            background: #1e1e2f;
+            padding: 50px;
+            margin: 30px 0;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(142, 68, 173, 0.3);
+        }
+        h2 {
+            color: #ffcc00;
+            border-bottom: 4px solid #ffcc00;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .details-container {
+            display: none;
+            padding: 30px;
+            background: #22223b;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(255, 204, 0, 0.3);
+            margin-top: 25px;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input[type="radio"]:checked + .details-container {
+            display: block;
+        }
+        label {
+            display: block;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 12px 0;
+            color: #ffcc00;
+            transition: color 0.3s, transform 0.3s;
+        }
+        label:hover {
+            color: #ff5733;
+            transform: scale(1.05);
+        }
+        .destination img {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+            filter: brightness(0.85);
+            transition: transform 0.3s;
+        }
+        .destination img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(to right, #8e44ad, #c0392b);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .read-more {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 20px;
+            background-color: #ffcc00;
+            color: #121212;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            background-color: #ff5733;
+            color: white;
+        }
+        #greeting {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore World - Travel Agency</h1>
+        <p>Your gateway to unforgettable journeys</p>
+        <p id="greeting"></p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Popular Destinations in India</h2>
+            <label for="coorg-details">Coorg, Karnataka </label>
+            <input type="radio" id="coorg-details" name="destination">
+            <div class="details-container">
+                <img src="2.jpeg" alt="Coorg">
+                <p><b>Package:</b> 3 Days, 2 Nights</p>
+                <p><b>Places to Visit:</b> Abbey Falls, Raja's Seat, Dubare Elephant Camp</p>
+                <p><b>Price:</b> ₹12,500 per person</p>
+                <p><b>Pickup Point: Bangalore</b></p>
+                <p><b>Includes:</b> AC Transport, Hotel, Breakfast, Sightseeing</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Explore World Travel Agency. All rights reserved.</p>
+    </footer>
+    <script>
+        let hours = new Date().getHours();
+        let greetingText = (hours < 12) ? "Good Morning, Traveler!" :
+                           (hours < 18) ? "Good Afternoon, Adventurer!" :
+                                          "Good Evening, Explorer!";
+
+        document.getElementById("greeting").innerText = greetingText;
+    </script>
+</body>
+</html>
