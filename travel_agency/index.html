@@ -50,12 +50,6 @@
             box-shadow: 0px 8px 16px rgba(255, 204, 0, 0.3);
             margin-top: 25px;
         }
-        input[type="radio"] {
-            display: none;
-        }
-        input[type="radio"]:checked + .details-container {
-            display: block;
-        }
         label {
             display: block;
             cursor: pointer;
@@ -121,10 +115,11 @@
     <div class="container">
         <div class="section">
             <h2>Popular Destinations in India</h2>
-            <label for="coorg-details">Coorg, Karnataka </label>
-            <input type="radio" id="coorg-details" name="destination">
-            <div class="details-container">
-                <img src="2.jpeg" alt="Coorg">
+            <label id="toggle-coorg">Coorg, Karnataka </label>
+            <div class="details-container" id="coorg-details">
+                <div class="destination">
+                    <img id="coorg-image" src="2.jpg" alt="Coorg">
+                </div>
                 <p><b>Package:</b> 3 Days, 2 Nights</p>
                 <p><b>Places to Visit:</b> Abbey Falls, Raja's Seat, Dubare Elephant Camp</p>
                 <p><b>Price:</b> ₹12,500 per person</p>
@@ -136,13 +131,34 @@
     <footer>
         <p>&copy; 2025 Explore World Travel Agency. All rights reserved.</p>
     </footer>
+
     <script>
+        // Dynamic greeting based on time
         let hours = new Date().getHours();
         let greetingText = (hours < 12) ? "Good Morning, Traveler!" :
                            (hours < 18) ? "Good Afternoon, Adventurer!" :
                                           "Good Evening, Explorer!";
-
         document.getElementById("greeting").innerText = greetingText;
+
+        // Toggle destination details on click
+        document.getElementById("toggle-coorg").addEventListener("click", function() {
+            let details = document.getElementById("coorg-details");
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+                details.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+
+        // Change image dynamically
+        let coorgImages = ["2.jpeg", "coorg2.jpg", "coorg3.jpg"]; // Add multiple images
+        let currentIndex = 0;
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % coorgImages.length;
+            document.getElementById("coorg-image").src = coorgImages[currentIndex];
+        }
+        setInterval(changeImage, 5000); // Change every 5 seconds
     </script>
 </body>
 </html>

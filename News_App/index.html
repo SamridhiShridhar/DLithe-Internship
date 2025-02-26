@@ -144,5 +144,39 @@
 <div class="contact-section">
     <a href="enquire.html" id="read-more" class="read-more">Read More / Enquire</a>
 </div>
+<script>
+    const categories = {
+        "Business": [],
+        "Politics": [],
+        "Finance": [],
+        "Economy": [],
+        "Technology": [],
+        "Sports": [],
+        "Health": [],
+        "Entertainment": [],
+        "World News": [],
+        "Aviation": []
+    };
+
+    function filterNewsByCategory(category) {
+        document.querySelectorAll(".news-section").forEach(section => {
+            let newsMeta = section.querySelector(".news-meta").textContent;
+            
+            if (category === "Home" || newsMeta.includes(category)) {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        });
+    }
+    
+    document.querySelectorAll("nav ul li a").forEach(a => {
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            let category = this.textContent.trim();
+            filterNewsByCategory(category);
+        });
+    });
+</script>
 </body>
 </html>

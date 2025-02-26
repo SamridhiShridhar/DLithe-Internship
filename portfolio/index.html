@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f0f2f5;
+            transition: background-color 0.3s, color 0.3s;
         }
         .container {
             max-width: 800px;
@@ -18,16 +19,18 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
+            transition: background-color 0.3s;
         }
-        h1, h2 {
+        h1, h2, h3, h4, h5, h6 {
             color: #2c3e50;
+            transition: color 0.3s;
         }
         .section {
             margin-bottom: 20px;
             padding: 10px;
-            
             background: #ecf0f1;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
         ul {
             list-style-type: none;
@@ -43,72 +46,94 @@
         a:hover {
             text-decoration: underline;
         }
+        .dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        .dark-mode .container {
+            background: #34495e;
+        }
+        .dark-mode .section {
+            background: #2c3e50;
+        }
+        .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+            color: #ecf0f1;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .theme-toggle:hover {
+            background: #1c5985;
+        }
     </style>
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
     <div class="container">
-        <h1 style="margin: 20px;">Samridhi S</h1>
-        <h2 style="margin: 20px;">INFORMATION SCIENCE - STUDENT</h2>
-        <p style="margin: 20px;">Mangalore, India |  samridhi.s.1512@gmail.com |  +91 9686940205</p>
-        <p style="margin: 20px;"> <a href="https://www.linkedin.com/in/samridhi-s-7057b3228" target="_blank"> https://www.linkedin.com/in/samridhi-s-7057b3228</a></p>
+        <h1>Samridhi S</h1>
+        <h2>INFORMATION SCIENCE - STUDENT</h2>
+        <p>Mangalore, India | samridhi.s.1512@gmail.com | +91 9686940205</p>
+        <p><a href="https://www.linkedin.com/in/samridhi-s-7057b3228" target="_blank">LinkedIn Profile</a></p>
         
-        <div ><div style="background-color: #ecf0f1; border-radius: 20px; ">
-            <h2 style="margin: 20px;">Summary</h2></div>
-            <p style="margin: 20px;">Dedicated and results-driven Information Science & Engineering student with a strong academic background and practical experience in various engineering projects. Eager to contribute my skills and knowledge to the field of information science and engineering while actively participating in meaningful projects.</p>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Dedicated and results-driven Information Science & Engineering student with a strong academic background and practical experience in various engineering projects. Eager to contribute my skills and knowledge to the field of information science and engineering while actively participating in meaningful projects.</p>
         </div>
         
-        <div ><div style="background-color: #ecf0f1; border-radius: 20px; ">
-            <h2 style="margin: 20px;">Education</h2></div>
-            <p style="margin: 20px;"><strong>Bachelor of Engineering - Information Science</strong></p>
-            <p style="margin: 20px;">Canara Engineering College, Bantwal, India (11/2021 - Present)</p>
-            <p style="margin: 20px;">CGPA: 8.48</p>
-            
-            <p style="margin: 20px;"><strong>Pre-University - PCMB</strong></p>
-            <p style="margin: 20px;">St. Aloysius PU College, Mangalore, India (2019 - 2021)</p>
-            <p style="margin: 20px;">Marks: 80.66%</p>
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Engineering - Information Science</strong></p>
+            <p>Canara Engineering College, Bantwal, India (11/2021 - Present)</p>
+            <p>CGPA: 8.48</p>
+            <p><strong>Pre-University - PCMB</strong></p>
+            <p>St. Aloysius PU College, Mangalore, India (2019 - 2021)</p>
+            <p>Marks: 80.66%</p>
         </div>
         
-        <div ><div style="background-color: #ecf0f1; border-radius: 20px;  ">
-            <h2 style="margin: 20px;">Technical Skills</h2></div>
-            <table style="margin: 20px; width: 100%">
-                <tr><td>Django</td>
-                <td>Web Development - HTML, CSS, JavaScript</td></tr>
-                <tr><td>C Programming Language</td>
-                <td>MySQL</td></tr>
-                <tr><td>Java Programming (Basics)</td>
-                <td>Python (Basics)</td></tr>
-                </table>
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <table>
+                <tr><td>Django</td><td>Web Development - HTML, CSS, JavaScript</td></tr>
+                <tr><td>C Programming</td><td>MySQL</td></tr>
+                <tr><td>Java Programming (Basics)</td><td>Python (Basics)</td></tr>
+            </table>
         </div>
         
-        <div ><div style="background-color: #ecf0f1; border-radius: 20px; ">
-            <h2 style="margin: 20px;">Projects</h2></div>
-            <p style="margin: 20px;"><strong>QuickBite - E-Canteen System (Nov 2024 - Present)</strong></p>
-            <p style="margin: 20px;">Scalable E-Canteen web application with real-time tracking, automated notifications, and efficient inventory management.</p>
-            <p style="margin: 20px;"><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
-            
-            <p style="margin: 20px;"><strong>Speech-Based Queries (Nov 2023 - July 2024)</strong></p>
-            <p style="margin: 20px;">PDF chatbot accepting speech-based queries and converting them into text-based searches.</p>
-            <p style="margin: 20px;"><strong>Tech Stack:</strong> Llama Index, Llama2, Apache Cassandra, Datastax, Gradient LLM, Langchain, SpeechRecognition</p>
-            
-            <p style="margin: 20px;"><strong>Social Networking Site (Nov 2023 - Mar 2024)</strong></p>
-            <p style="margin: 20px;">Social networking site enabling user interaction and engagement.</p>
-            <p style="margin: 20px;"><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+        <div class="section">
+            <h2>Projects</h2>
+            <p><strong>QuickBite - E-Canteen System (Nov 2024 - Present)</strong></p>
+            <p>Scalable E-Canteen web application with real-time tracking, automated notifications, and efficient inventory management.</p>
+            <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+            <p><strong>Speech-Based Queries (Nov 2023 - July 2024)</strong></p>
+            <p>PDF chatbot accepting speech-based queries and converting them into text-based searches.</p>
+            <p><strong>Tech Stack:</strong> Llama Index, Llama2, Apache Cassandra, Datastax, Gradient LLM, Langchain, SpeechRecognition</p>
+            <p><strong>Social Networking Site (Nov 2023 - Mar 2024)</strong></p>
+            <p>Social networking site enabling user interaction and engagement.</p>
+            <p><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
         </div>
         
-        <div ><div style="background-color: #ecf0f1; border-radius: 20px; ">
-            <h2 style="margin: 20px;">Interests</h2></div>
-            <table style="margin: 20px; width: 100%">
-                <tr><td>Event Organizer</td>
-                <td>Learning new languages</td></tr>
-                <tr><td>Singing</td>
-                <td>Self Improvement</td></tr>
-                <tr><td>Cafe Hopping</td>
-                    <td></td></tr>
+        <div class="section">
+            <h2>Interests</h2>
+            <table>
+                <tr><td>Event Organizer</td><td>Learning new languages</td></tr>
+                <tr><td>Singing</td><td>Self Improvement</td></tr>
+                <tr><td>Cafe Hopping</td><td></td></tr>
             </table>
         </div>
     </div>
-    <div class="footer">
-        <p><a href="contact.html">Go to Contact Page</a></p>
-    </div>
+    <script>
+        document.getElementById("theme-toggle").addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
 </body>
 </html>
